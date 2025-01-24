@@ -1,0 +1,114 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,300;1,300&display=swap");
+
+/* Universal styling for all elements */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure padding and border do not affect element dimensions */
+  font-family: "Open Sans", serif; /* Default font family */
+}
+
+/* Styling for the navigation bar */
+nav {
+  background-color: #343a40; /* Dark background color */
+  color: white; /* White text */
+  height: 65px; /* Set height of the navbar */
+  font-size: 27px; /* Font size for the text */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center the content */
+  padding: 0 12px; /* Padding on left and right */
+  font-family: "Roboto", sans-serif; /* Set font for navbar */
+}
+
+/* Styling for the unordered list in navbar (if any) */
+nav ul {
+  list-style-type: none; /* Remove default list style */
+  margin: auto; /* Center the list items horizontally */
+}
+
+/* Main container styling */
+main {
+  width: 100%; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: skyblue; /* Light blue background */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Box container for the input and to-do list */
+.box {
+  width: 700px; /* Set width of the box */
+  min-height: 500px; /* Set minimum height */
+  background-color: wheat; /* Wheat-colored background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px; /* Padding inside the box */
+  margin-top: auto; /* Center box vertically with auto margin */
+  margin-bottom: auto; /* Center box vertically with auto margin */
+}
+
+/* Input field for adding tasks */
+#item {
+  width: 100%; /* Full width of the box */
+  padding: 10px; /* Padding for better input spacing */
+  font-size: 20px; /* Larger font size */
+  border: 0; /* Remove border */
+  outline: 0; /* Remove outline on focus */
+  display: block; /* Make input field block-level */
+  font-weight: 700; /* Bold font weight */
+  box-shadow: 0 0 2px gray; /* Subtle shadow for input */
+  border-radius: 10px; /* Rounded corners for input */
+}
+
+/* Container for to-do list items */
+#to-do-box {
+  list-style: none; /* Remove default list styling */
+  margin-top: 20px; /* Margin to separate input from the list */
+  max-height: 400px; /* Set maximum height for the to-do list */
+  overflow-y: auto; /* Enable vertical scrolling if items exceed max height */
+  padding-right: 10px; /* Padding to account for the scrollbar */
+}
+
+/* Slim scrollbar styling */
+#to-do-box::-webkit-scrollbar {
+  width: 5px; /* Slim scrollbar width */
+}
+
+/* Styling for the scrollbar thumb (the draggable part) */
+#to-do-box::-webkit-scrollbar-thumb {
+  background-color: #343a40; /* Dark thumb color */
+  border-radius: 10px; /* Rounded edges for the thumb */
+}
+
+/* Styling for the scrollbar track (the background part) */
+#to-do-box::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light track color */
+}
+
+/* Styling for individual to-do list items */
+#to-do-box li {
+  background-color: rgb(34, 69, 58); /* Dark green background */
+  color: white; /* White text color */
+  padding: 10px; /* Padding inside the list items */
+  border-radius: 3px; /* Slightly rounded corners */
+  position: relative; /* Positioning for the delete button */
+  margin-top: 10px; /* Margin between tasks */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Styling for the delete icon */
+#deleteSVG {
+  width: 25px; /* Set the width of the delete icon */
+  position: absolute; /* Position the icon relative to the list item */
+  right: 10px; /* Position it 10px from the right */
+  top: 10px; /* Position it 10px from the top */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Styling for tasks marked as "done" */
+.done {
+  text-decoration: line-through; /* Strike-through the text */
+  color: black; /* Change text color to black */
+  background-color: gray !important; /* Change background color to gray (overrides other styles) */
+}
